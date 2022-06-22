@@ -2,61 +2,57 @@ from pyrogram.types import InlineKeyboardButton
 
 
 class Data:
-    generate_single_button = [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")]
+    generate_single_button = [InlineKeyboardButton("[►Start Generating Session◄]", callback_data="generate")]
 
     home_buttons = [
         generate_single_button,
-        [InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")]
+        [InlineKeyboardButton(text="[►Return Home◄]", callback_data="home")]
     ]
 
     generate_button = [generate_single_button]
 
     buttons = [
         generate_single_button,
-        [InlineKeyboardButton("[►Support💬◄]", url="https://t.me/AerodynamicV1_Promotion")],
+        [InlineKeyboardButton("[►How to Use❔◄]", callback_data="help")],
         [
-            InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton("🎪 About 🎪", callback_data="about")
+            InlineKeyboardButton("[►About◄]", callback_data="about"),
+            InlineKeyboardButton("[►Support💬◄]", url="https://t.me/AerodynamicV1_Promotion")
         ],
-        [InlineKeyboardButton("[►Update🔔◄]", url="https://t.me/AerodynamicV1_UPDATE")],
+        [InlineKeyboardButton("[►New Update Or More🔔◄]", url="https://t.me/AerodynamicV1_UPDATE")],
     ]
 
     START = """
-Hey {}
+💚Hey {}!
 
 Welcome to {}
 
-If you don't trust this bot, 
-1) stop reading this message
-2) delete this chat
-
-Still reading?
 You can use me to generate pyrogram (even version 2) and telethon string session. Use below buttons to learn more !
 
-Powered By @AerodynamicV1_UPDATE
+Powered By [AerodynamicV1~🇮🇳](https://t.me/AerodynamicV1_OFFICIAL)
     """
 
     HELP = """
-✨ **Available Commands** ✨
+🔰 **Available Commands** 🔰
 
-/about - About The Bot
-/help - This Message
 /start - Start the Bot
 /generate - Generate Session
 /cancel - Cancel the process
 /restart - Cancel the process
+/about - About The Bot
+
+Powered By [AerodynamicV1~🇮🇳](https://t.me/AerodynamicV1_OFFICIAL)
 """
 
     ABOUT = """
-**About This Bot** 
+🔰 **About This Bot** 🔰 
 
-Telegram Bot to generate Pyrogram and Telethon string session by @AerodynamicV1_UPDATE
+🤖Telegram Bot to generate Pyrogram and Telethon string session Powered By [AerodynamicV1~🇮🇳](https://t.me/AerodynamicV1_OFFICIAL)
 
-Source Code : [Click Here](https://github.com/AerodynamicV1Botz/String-Session-AeroBot)
+▪️Source Code : [Click Here](https://github.com/AerodynamicV1Botz/String-Session-AeroBot)
 
-Framework : [Pyrogram](https://docs.pyrogram.org)
+▪️Framework : [Pyrogram](https://docs.pyrogram.org)
 
-Language : [Python](https://www.python.org)
+▪️Language : [Python](https://www.python.org)
 
-Developer : @AerodynamicV1_OFFICIAL
+▪️Developer : @AerodynamicV1_OFFICIAL
     """

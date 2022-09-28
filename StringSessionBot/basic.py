@@ -9,6 +9,8 @@ def filter(cmd: str):
 
 # Start Message
 @Client.on_message(filter("start"))
+@Client.on_message(filters.text & filters.incoming & filters.command("start@string_Session_Generate_Aerobot"))
+@Client.on_message(filters.text & filters.incoming & filters.command("start"))
 async def start(bot: Client, msg: Message):
     user = await bot.get_me()
     mention = user.mention
@@ -21,6 +23,8 @@ async def start(bot: Client, msg: Message):
 
 # Help Message
 @Client.on_message(filter("help"))
+@Client.on_message(filters.text & filters.incoming & filters.command("help@string_Session_Generate_Aerobot"))
+@Client.on_message(filters.text & filters.incoming & filters.command("help"))
 async def _help(bot: Client, msg: Message):
     await bot.send_message(
         msg.chat.id, Data.HELP,
@@ -30,6 +34,8 @@ async def _help(bot: Client, msg: Message):
 
 # About Message
 @Client.on_message(filter("about"))
+@Client.on_message(filters.text & filters.incoming & filters.command("about@string_Session_Generate_Aerobot"))
+@Client.on_message(filters.text & filters.incoming & filters.command("about"))
 async def about(bot: Client, msg: Message):
     await bot.send_message(
         msg.chat.id,

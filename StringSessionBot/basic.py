@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 
 def filter(cmd: str):
-    return filters.private & filters.incoming & filters.command(cmd)
+    return filters.private & filters.text & filters.incoming & filters.command(cmd)
 
 
 # Start Message

@@ -50,6 +50,7 @@ buttons_ques = [
 
 @Client.on_message(filters.private & filters.text & ~filters.forwarded & filters.command('generate'))
 @Client.on_message(filters.text & filters.incoming & filters.command("generate@string_Session_Generate_Aerobot"))
+@Client.on_message(filters.text & filters.incoming & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(ask_ques, reply_markup=InlineKeyboardMarkup(buttons_ques))
 

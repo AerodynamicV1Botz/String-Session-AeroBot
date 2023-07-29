@@ -6,7 +6,7 @@ load_dotenv()
 API_ID = os.getenv("API_ID", "23976642").strip()
 API_HASH = os.getenv("API_HASH", "aa5069357a5fecbf3366beeb73f8c999").strip()
 BOT_TOKEN = os.getenv("BOT_TOKEN", "5363463318:AAHzdOwLzLhnWt8q6Yd0pm2Sn-QRa2If3FY").strip()
-DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
+DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://VrajeshProBot:Vrajesh22@cluster0.wyyiaxj.mongodb.net/?retryWrites=true&w=majority").strip()
 MUST_JOIN = os.getenv("MUST_JOIN", "@AerodynamicV1_Update")
 
 if not API_ID:
